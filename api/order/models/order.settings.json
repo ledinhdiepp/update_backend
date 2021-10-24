@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "order",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "productList": {
+      "type": "json"
+    },
+    "note": {
+      "type": "text"
+    },
+    "creator": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "divide_orders": {
+      "collection": "order"
+    },
+    "buyer": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "status": {
+      "type": "string"
+    },
+    "shipments": {
+      "collection": "shipment"
+    },
+    "remainProductList": {
+      "type": "json"
+    },
+    "transection": {
+      "via": "order",
+      "model": "transections"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transections",
+  "info": {
+    "name": "Transections",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "total": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "string"
+    },
+    "note": {
+      "type": "richtext"
+    },
+    "address": {
+      "type": "richtext"
+    },
+    "buyer": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "transections"
+    },
+    "order": {
+      "model": "order",
+      "via": "transection"
+    }
+  }
+}

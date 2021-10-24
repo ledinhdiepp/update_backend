@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customer_infos",
+  "info": {
+    "name": "customerInfo",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "firm": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "dateOfBirth": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "boolean"
+    },
+    "customerId": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "district": {
+      "type": "string"
+    },
+    "wards": {
+      "type": "string"
+    },
+    "street": {
+      "type": "string"
+    }
+  }
+}

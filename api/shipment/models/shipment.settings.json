@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shipments",
+  "info": {
+    "name": "shipment",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "shipper": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "productList": {
+      "type": "json"
+    },
+    "status": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "buyer": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "orderID": {
+      "type": "string"
+    },
+    "theLast": {
+      "type": "boolean"
+    }
+  }
+}
